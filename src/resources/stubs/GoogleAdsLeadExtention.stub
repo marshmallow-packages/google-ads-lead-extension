@@ -1,0 +1,38 @@
+<?php
+
+namespace App;
+
+use Marshmallow\GoogleAdsLeadExtention\App\GoogleAdsLeadExtentionBase;
+
+class GoogleAdsLeadExtention extends GoogleAdsLeadExtentionBase
+{
+	public function handle ()
+	{
+		/**
+		 * Do with the lead what you need to do! Add it to your database,
+		 * push it to you CRM, whatever is needed. If you just want to be
+		 * notified by e-mail, no programming is nessesary!
+		 *
+		 * Available methods for getting the lead data:
+		 * 	$this->getLeadId()
+		 * 	$this->getClickId() OR $this->getGclId()
+		 * 	$this->getFormId()
+		 * 	$this->getCampaignId()
+		 * 	$this->getApiVersion()
+		 * 	$this->isTest()
+		 * 	$this->getFullName()
+		 * 	$this->getPhoneNumber()
+		 * 	$this->getEmail()
+		 * 	$this->getPostalCode()
+		 */
+	}
+
+	/**
+	 * The global notify method will send you an e-mail when a new
+	 * lead is available by Google Ads. If you want to change this
+	 * functionality, you can overrule the method here. The mail
+	 * will be sent to the e-mail adress that has been provided in
+	 * the config/google-ads-lead-extention.php
+	 */
+	// public function notify () {}
+}
