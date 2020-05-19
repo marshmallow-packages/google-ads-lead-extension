@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace Marshmallow\GoogleAdsLeadExtension;
 
-use Marshmallow\GoogleAdsLeadExtention\App\GoogleAdsLeadExtentionBase;
+use Marshmallow\GoogleAdsLeadExtension\GoogleAdsLeadExtensionBase;
 
-class GoogleAdsLeadExtention extends GoogleAdsLeadExtentionBase
+class GoogleAdsLeadExtension extends GoogleAdsLeadExtensionBase
 {
 	public function handle ()
 	{
@@ -32,7 +32,7 @@ class GoogleAdsLeadExtention extends GoogleAdsLeadExtentionBase
 	 * lead is available by Google Ads. If you want to change this
 	 * functionality, you can overrule the method here. The mail
 	 * will be sent to the e-mail adress that has been provided in
-	 * the config/google-ads-lead-extention.php
+	 * the config/google-ads-lead-extension.php
 	 */
 	// public function notify () {}
 }

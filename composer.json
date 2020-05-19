@@ -1,7 +1,7 @@
 {
-    "name": "marshmallow/google-ads-lead-extention",
-    "description": "This package will help you handle leads that come in from Google Ads Leads Extention.",
-    "keywords": ["marshmallow","google ads","Google Ads Leads Extention", "Google Leads Extention"],
+    "name": "marshmallow/google-ads-lead-extension",
+    "description": "This package will help you handle leads that come in from Google Ads Leads Extension.",
+    "keywords": ["marshmallow","google ads","Google Ads Leads Extension", "Google Leads Extension"],
     "homepage": "https://github.com/Marshmallow-Development/",
     "type": "library",
     "license": "MIT",
@@ -22,15 +22,15 @@
         "marshmallow/commands": "^1.0"
     },
     "autoload": {
-        "psr-4": {"Marshmallow\\GoogleAdsLeadExtention\\": "src"}
+        "psr-4": {"Marshmallow\\GoogleAdsLeadExtension\\": "src"}
     },
     "autoload-dev": {
-        "psr-4": {"Marshmallow\\GoogleAdsLeadExtention\\": "src"}
+        "psr-4": {"Marshmallow\\GoogleAdsLeadExtension\\": "src"}
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Marshmallow\\GoogleAdsLeadExtention\\GoogleAdsLeadExtentionServiceProvider"
+                "Marshmallow\\GoogleAdsLeadExtension\\GoogleAdsLeadExtensionServiceProvider"
             ]
         }
     }

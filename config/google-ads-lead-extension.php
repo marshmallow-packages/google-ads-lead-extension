@@ -12,5 +12,5 @@ return [
 	 * Emailaddress where new leads will be mailed to.
 	 */
 	'conversion-email-address' => '',
-	
+
 ];
