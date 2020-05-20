@@ -31,7 +31,7 @@ class GoogleAdsLeadExtensionServiceProvider extends ServiceProvider {
 		 * Config
 		 */
 		$this->publishes([
-			__DIR__ . '/config/google-ads-lead-extension.php' => config_path('google-ads-lead-extension.php'),
+			__DIR__ . '/../config/google-ads-lead-extension.php' => config_path('google-ads-lead-extension.php'),
 		]);
 
 		$this->loadViewsFrom(__DIR__ . '/resources/views', 'google-ads-lead-extension');
