@@ -3,33 +3,33 @@
 </p>
 <p align="center">
     <a href="https://github.com/Marshmallow-Development">
-        <img src="https://img.shields.io/github/issues/Marshmallow-Development/package-googleadsleadextention.svg" alt="Issues">
+        <img src="https://img.shields.io/github/issues/Marshmallow-Development/package-googleadsleadextension.svg" alt="Issues">
     </a>
     <a href="https://github.com/Marshmallow-Development">
-        <img src="https://img.shields.io/github/forks/Marshmallow-Development/package-googleadsleadextention.svg" alt="Forks">
+        <img src="https://img.shields.io/github/forks/Marshmallow-Development/package-googleadsleadextension.svg" alt="Forks">
     </a>
     <a href="https://github.com/Marshmallow-Development">
-        <img src="https://img.shields.io/github/stars/Marshmallow-Development/package-googleadsleadextention.svg" alt="Stars">
+        <img src="https://img.shields.io/github/stars/Marshmallow-Development/package-googleadsleadextension.svg" alt="Stars">
     </a>
     <a href="https://github.com/Marshmallow-Development">
-        <img src="https://img.shields.io/github/license/Marshmallow-Development/package-googleadsleadextention.svg" alt="License">
+        <img src="https://img.shields.io/github/license/Marshmallow-Development/package-googleadsleadextension.svg" alt="License">
     </a>
 </p>
 
-# Google Ads Lead Extention
-This module will make it very easy to handle leads that come in from the Lead Extention in Google Ads. You will be able to do whatever you want to do with the data that is sent to you by Google Ads.
+# Google Ads Lead Extension
+This module will make it very easy to handle leads that come in from the Lead Extension in Google Ads. You will be able to do whatever you want to do with the data that is sent to you by Google Ads.
 
 ### Installing
 ```
-composer require marshmallow/package-google-ads-lead-extention
+composer require marshmallow/package-google-ads-lead-extension
 ```
 
 Run the installer so everything is setup correctly
 ```
-php artisan googleads:install-lead-extention
+php artisan googleads:install-lead-extension
 ```
 
-The installer will generate a `Google Key` for you. This will be shown in your console while running the installer. You will need this key for setting up your lead extention. This key will be used to validate the request is allowed. If you've lost your key, we store the generated key in your `.env` file so you can always find it there under `GOOGLE_ADS_LEAD_EXTENTION_KEY=...`.
+The installer will generate a `Google Key` for you. This will be shown in your console while running the installer. You will need this key for setting up your lead extension. This key will be used to validate the request is allowed. If you've lost your key, we store the generated key in your `.env` file so you can always find it there under `GOOGLE_ADS_LEAD_EXTENTION_KEY=...`.
 
 ## Make sure Google Ads can reach you!
 Update your `App\Http\Middleware\VerifyCsrfToken.php` file so Google will be allowed to do a POST request to your system.
@@ -42,13 +42,13 @@ class VerifyCsrfToken extends BaseVerifier
 {
   protected $except = [
     ...
-    config('google-ads-lead-extention.prefix') . '/*',
+    config('google-ads-lead-extension.prefix') . '/*',
   ];
 }
 ```
 
 ## Set up the notifier
-By default this package will sent you an email when a new lead is available. The only thing you need to do is adding your emailaddress to the config. Go to the config file `config/google-ads-lead-extention.php` and setup your emailadress.
+By default this package will sent you an email when a new lead is available. The only thing you need to do is adding your emailaddress to the config. Go to the config file `config/google-ads-lead-extension.php` and setup your emailadress.
 ```
 <?php
 
@@ -65,10 +65,10 @@ return [
 ```
 
 ## Do your magic with the lead
-After you've run the installer and made sure Google can reach this URL by making the nessesary adjustments in `VerifyCsrfToken.php` you are ready to work your magic. The installer has generated a new class in you app directory. You can find this class in `app/GoogleAdsLeadExtention.php`. This class has 2 methods for you to work with.
+After you've run the installer and made sure Google can reach this URL by making the nessesary adjustments in `VerifyCsrfToken.php` you are ready to work your magic. The installer has generated a new class in you app directory. You can find this class in `app/GoogleAdsLeadExtension.php`. This class has 2 methods for you to work with.
 
 ### handle()
-In this method you can do what you need to do with the available data. The available methods to retreive data from the Lead are available in the documentation in the `app/GoogleAdsLeadExtention.php` file. Use this function to add to lead to your database, to your CRM. What ever you need.
+In this method you can do what you need to do with the available data. The available methods to retreive data from the Lead are available in the documentation in the `app/GoogleAdsLeadExtension.php` file. Use this function to add to lead to your database, to your CRM. What ever you need.
 
 | Method                  | Description                                       |
 | ----------------------- |:-------------------------------------------------:|
@@ -77,7 +77,7 @@ In this method you can do what you need to do with the available data. The avail
 | $this->getGclId()       | The same as getClickId(), just a different name.  |
 | $this->getFormId()      | The form id in your Google Ads account.           |
 | $this->getCampaignId()  | Your Google Ads Campaign ID.                      |
-| $this->getApiVersion()  | The API version used by the Google Ads Extention. |
+| $this->getApiVersion()  | The API version used by the Google Ads Extension. |
 | $this->isTest()         | Is it a test request by Google or a real one.     |
 | $this->getFullName()    | Get the name provided by the user.                |
 | $this->getPhoneNumber() | Get the phonenumber provided by the user.         |
