@@ -14,7 +14,7 @@ Route::group(
 		Route::post(
 			'/lead-extension',
 			'GoogleAdsLeadExtensionController@index'
-		)->name('GoogleAdsLeadExtensionController@index');
+		)->name('GoogleAdsLeadExtension');
 
 		/**
 		 * Temp alias because of a spelling mistake. We should

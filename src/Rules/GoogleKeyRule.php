@@ -15,10 +15,7 @@ class GoogleKeyRule implements Rule
 	 */
 	public function passes($attribute, $value)
 	{
-		if (!env('GOOGLE_ADS_LEAD_EXTENTION_KEY')) {
-			return false;
-		}
-		if (env('GOOGLE_ADS_LEAD_EXTENTION_KEY') !== $value) {
+		if (config('google-ads-lead-extension.key') !== $value) {
 			return false;
 		}
 		return true;

@@ -16,6 +16,13 @@ return [
 
 
 	/**
+	 * Private key to make sure the request are coming
+	 * from Google. This key will be added to you Google Ads Extension
+	 */
+	'key' => env('GOOGLE_ADS_LEAD_EXTENTION_KEY', 'DUMMY_KEY'),
+
+
+	/**
 	 * The class that will handle the webhook data. This class should extend
 	 * Marshmallow\GoogleAdsLeadExtension\GoogleAdsLeadExtensionBase to work.
 	 */
