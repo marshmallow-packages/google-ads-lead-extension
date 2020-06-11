@@ -7,7 +7,8 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Marshmallow\GoogleAdsLeadExtension\GoogleAdsLeadExtensionBase;
 
-class GoogleAdsLeadExtensionNotifier extends Mailable {
+class GoogleAdsLeadExtensionNotifier extends Mailable
+{
 	use Queueable, SerializesModels;
 
 	private $lead;
@@ -17,7 +18,8 @@ class GoogleAdsLeadExtensionNotifier extends Mailable {
 	 *
 	 * @return void
 	 */
-	public function __construct(GoogleAdsLeadExtensionBase $lead) {
+	public function __construct(GoogleAdsLeadExtensionBase $lead)
+	{
 		$this->lead = $lead;
 	}
 
@@ -26,7 +28,8 @@ class GoogleAdsLeadExtensionNotifier extends Mailable {
 	 *
 	 * @return $this
 	 */
-	public function build() {
+	public function build()
+	{
 		return $this->markdown('google-ads-lead-extension::newLead')
 			->with([
 				'lead' => $this->lead,

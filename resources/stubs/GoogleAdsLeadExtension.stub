@@ -1,12 +1,12 @@
 <?php
 
-namespace Marshmallow\GoogleAdsLeadExtension;
+namespace App;
 
 use Marshmallow\GoogleAdsLeadExtension\GoogleAdsLeadExtensionBase;
 
 class GoogleAdsLeadExtension extends GoogleAdsLeadExtensionBase
 {
-	public function handle ()
+	public function handle()
 	{
 		/**
 		 * Do with the lead what you need to do! Add it to your database,

@@ -4,7 +4,8 @@ namespace Marshmallow\GoogleAdsLeadExtension\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class GoogleKeyRule implements Rule {
+class GoogleKeyRule implements Rule
+{
 	/**
 	 * Determine if the validation rule passes.
 	 *
@@ -12,7 +13,8 @@ class GoogleKeyRule implements Rule {
 	 * @param  mixed  $value
 	 * @return bool
 	 */
-	public function passes($attribute, $value) {
+	public function passes($attribute, $value)
+	{
 		if (!env('GOOGLE_ADS_LEAD_EXTENTION_KEY')) {
 			return false;
 		}
@@ -27,7 +29,8 @@ class GoogleKeyRule implements Rule {
 	 *
 	 * @return string
 	 */
-	public function message() {
+	public function message()
+	{
 		return 'The provided key doesnt match the generated `GOOGLE_ADS_LEAD_EXTENTION_KEY`.';
 	}
 }
