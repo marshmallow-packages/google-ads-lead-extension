@@ -25,21 +25,21 @@ class GoogleLeadRequest extends FormRequest
     public function rules()
     {
         return [
-			'lead_id' => [
-				'required', 'string'
-			],
-			'api_version' => [
-				'required', 'string'
-			],
-			'form_id' => [
-				'required', 'int'
-			],
-			'campaign_id' => [
-				'required', 'int'
-			],
-			'google_key' => [
-				'required', 'string', new GoogleKeyRule
-			]
+            'lead_id' => [
+                'required', 'string',
+            ],
+            'api_version' => [
+                'required', 'string',
+            ],
+            'form_id' => [
+                'required', 'int',
+            ],
+            'campaign_id' => [
+                'required', 'int',
+            ],
+            'google_key' => [
+                'required', 'string', new GoogleKeyRule,
+            ],
         ];
     }
 }
